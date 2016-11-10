@@ -17,6 +17,7 @@ This theme is a stripped down fork of my personal blog, available [here](https:/
 * `git pull` into your local environment
 * Delete all boilerplate posts in the \_posts directory
 * Modify site branding in index.html and header.html
+* `git push` back to Github
 * Enable Github Pages in repository settings
 * Done!
 
