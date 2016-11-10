@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="posts mdl-grid">
+  <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+    <div class="coloredtop" {% if page.color %} style="background-color: {{ page.color }};" {% else %} style="background-color: #333;"  {% endif %}>
+      <div class="titlediv">
+        <p class="posttitle" {% if page.textcolor %} style="color: {{ page.textcolor }};" {% else %} style="color: #fb518b;"  {% endif %}>{{ page.title }}</p>
+      </div>
+      <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-menu-top-right" id="sharemenu">
+          <i class="material-icons">share</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="sharemenu">
+          <li class="mdl-menu__item">Facebook</li>
+          <li class="mdl-menu__item">Twitter</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mdl-card__supporting-text" id="bottomremover">
+      {% assign words = content | number_of_words %}
+      <p id="rightalign"><strong>{{ page.date | date: '%B %d, %Y' }}</strong>&emsp;•&emsp;{% include readtime.html %}<br><strong>Author:</strong> {{ page.author }}</p>
+    </div>
+
+    <div class="postcontent">
+      {{ content }}
+    </div>
+
+  </div>
+
+  <nav class="bottom-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+          {% if page.previous %}
+          <a href="{{ page.previous.url | prepend: site.baseurl }}" class="bottom-nav__button">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+              <i class="material-icons">arrow_back</i>
+            </button>
+            Older
+          </a>
+          {% endif %}
+          {% if page.next %}
+          <div class="section-spacer"></div>
+          <a href="{{ page.next.url | prepend: site.baseurl }}" class="bottom-nav__button">
+            Newer
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+              <i class="material-icons">arrow_forward</i>
+            </button>
+          </a>
+          {% endif %}
+    </nav>
+</div>

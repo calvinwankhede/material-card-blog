@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="posts mdl-grid">
+  <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+    <div class="coloredtop" {% if page.color %} style="background-color: {{ page.color }};" {% else %} style="background-color: #333;"  {% endif %}>
+      <div class="titlediv">
+        <p class="posttitle" {% if page.textcolor %} style="color: {{ page.textcolor }};" {% else %} style="color: #fb518b;"  {% endif %}>{{ page.title }}</p>
+      </div>
+      <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">share</i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mdl-card__supporting-text" id="bottomremover">
+      {% assign words = content | number_of_words %}
+      <p id="rightalign">{% include readtime.html %}</p>
+    </div>
+
+    <div class="postcontent">
+      {{ content }}
+    </div>
+
+  </div>
+</div>

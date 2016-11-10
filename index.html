@@ -1,0 +1,60 @@
+---
+layout: default
+title: Material Card
+---
+
+<div class="posts mdl-grid">
+  {% for post in paginator.posts %}
+  {% assign words = post.content | number_of_words %}
+    {% if forloop.first %}
+      <div class="mdl-card mdl-cell mdl-cell--8-col  mdl-shadow--2dp">
+        <div class="mdl-card__title titlebox" style="background-color: #333;">
+          <h2 class="mdl-card__title-text titleborder"><a class="index-titles" href="{{ post.url | relative_url }}" style="color: white;">{{ post.title }}</h2></a>
+        </div>
+        <div class="mdl-card__supporting-text" id="bottomremover">
+          <p><strong>{{ post.date | date: '%B %d, %Y' }}</strong>&emsp;•&emsp;{% include readtime.html %}</p>
+          <p class="excerpt">{{ post.content | strip_html | truncatewords: 65 }}</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border" id="topreducer">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | relative_url }}">Read More</a>
+        </div>
+
+      </div>
+    {% else %}
+      <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop  mdl-shadow--2dp">
+        <div class="mdl-card__title titlebox" {% if post.color %} style="background-color: {{ post.color }};" {% else %} style="background-color: #333;"  {% endif %}>
+          <h6 class="mdl-card__title-text">
+            <a class="index-titles" href="{{ post.url | relative_url }}"  {% if post.textcolor %} style="color: {{ post.textcolor }};" {% else %} style="color: white;"  {% endif %}>{{ post.title }}</h2></a>
+        </div>
+        <div class="mdl-card__supporting-text" id="bottomremover">
+          <p><strong>{{ post.date | date: '%B %d, %Y' }}</strong>&emsp;•&emsp;{% include readtime.html %}</p>
+          <p class="excerpt">{{ post.content | strip_html | truncatewords: 33 }}</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border" id="topreducer">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | relative_url }}">Read More</a>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <nav class="bottom-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="bottom-nav__button" title="show previous">
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style=".mdl-button:hover{background-color:white;}">
+                <i class="material-icons" role="presentation">arrow_backward</i>
+              </button>
+              Older
+            </a>
+            {% endif %}
+            {% if paginator.previous_page %}
+            <div class="section-spacer"></div>
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="bottom-nav__button" title="show more">
+              Newer
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style=".mdl-button:hover{background-color:white;}">
+                <i class="material-icons" role="presentation">arrow_forward</i>
+              </button>
+            </a>
+            {% endif %}
+          </nav>
+        </div>
+</div>

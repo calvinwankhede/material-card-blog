@@ -1,0 +1,200 @@
+---
+---
+@charset "utf-8";
+
+body {
+  background-color: #382f32;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 28px;
+  font-family: 'Roboto';
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-layout-transparent .mdl-layout__header,
+.nav-layout-transparent .mdl-layout__drawer-button {
+  color: white;
+}
+
+.headerbox {
+  background: url('{{ "/assets/images/header.jpg" | relative_url }}') 50% 50% / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: fixed;
+  text-align: center;
+  z-index: -1;
+}
+
+.headings {
+  display: table-cell;
+  padding-top: 2.5%;
+  background-color: rgba(108,108,108,.4);
+/*  background-image: url('{{ "/assets/images/dots.png" | relative_url }}'); */
+}
+
+.logo {
+  font-family: 'Lobster';
+  font-size: 25px;
+  color: white;
+}
+
+.mdl-layout__header > .mdl-layout__header-row > .mdl-layout-title {
+  display: block;
+}
+
+.newlogo {
+  display: block;
+  position: absolute;
+  font-size: 20px;
+  padding-left: 55px;
+  padding-top: 14px;
+}
+
+.posts {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.titlebox {
+  min-height: 150px;
+  cursor: pointer;
+}
+
+#bottomremover {
+  padding-bottom: 0px;
+}
+
+#topreducer {
+  padding-top: 4px;
+}
+
+.index-titles {
+  font-size: 24px;
+}
+
+.excerpt {
+  font-size: 15px;
+}
+
+.bottom-nav {
+  color: white;
+  margin: 12px 15px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.bottom-nav__button {
+  color: white;
+}
+
+.section-spacer {
+  flex-grow: 1;
+}
+
+.bottom-nav > .mdl-button:hover {
+  background-color:white !important;
+  text-decoration: none;
+}
+
+.bottom-nav .mdl-button {
+  color: rgba(0,0,0,0.54);
+  background-color: white;
+}
+
+.bottom-nav > .bottom-nav__button:first-child .mdl-button {
+  margin-right: 16px;
+}
+
+.bottom-nav > .bottom-nav__button:last-child .mdl-button {
+  margin-left: 16px;
+}
+
+/* post.html */
+
+.coloredtop {
+  min-height: 175px;
+  width: 100%;
+}
+
+.titlediv {
+  padding-top: 145px;
+  padding-left: 30px;
+
+}
+
+.posttitle {
+  font-size: 35px;
+  font-weight: lighter;
+  line-height: 40px;
+}
+
+#rightalign {
+  text-align: right;
+}
+
+.postcontent {
+  color: #333;
+  padding-left: 10%;
+  padding-right: 15%;
+  padding-top: 4%;
+  padding-bottom: 10%;
+  text-align: justify;
+}
+
+.postcontent > p {
+  font-size: 15px;
+}
+
+/* Media queries for responsive web design */
+
+@media only screen and (min-width: 1101px) {
+  .nav-layout-transparent > .mdl-layout__drawer-button {
+    display: none;
+  }
+  .newlogo {
+    display: none;
+  }
+  .content-push {
+    padding-top: 23%;
+    position: relative;
+    padding-bottom: 5%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .content-push {
+    padding-top: 35%;
+    position: relative;
+    padding-bottom: 5%;
+  }
+}
+@media only screen and (max-width:767px) {
+    .content-push {
+      padding-top: 45%;
+      position: relative;
+      padding-bottom: 5%;
+    }
+}
+@media only screen and (max-width:560px) {
+  .content-push {
+    padding-top: 50%;
+    position: relative;
+    padding-bottom: 5%;
+}
+}
+@media only screen and (max-width:430px) {
+  .content-push {
+    padding-top: 50%;
+    position: relative;
+    padding-bottom: 5%;
+}
+}
