@@ -1,6 +1,8 @@
 # Material Card blog
 
-Built with Jekyll, this blog theme uses Google's [Material Design Lite](https://getmdl.io) framework. Its primary aim is to be fast, responsive and light. With all external resources minified and gzipped, the homepage weighs under 500KB and loads near instantly while maintaining a beautiful design. Subsequent page loads will be faster
+Built with Jekyll, this blog theme uses Google's [Material Design Lite](https://getmdl.io) framework. Its primary aim is to be fast, responsive and light. With all external resources minified and gzipped, the homepage weighs under 500KB and loads near instantly while maintaining a beautiful design. Subsequent page loads will be faster.
+
+![Screenshot](/screenshot.png)
 
 A live demo is available [here](https://zogthealien.tk/material-card-blog/).
 
