@@ -42,6 +42,8 @@ author: Google
 Please use the Github Issue Tracker for this, I'd love to hear any and all feedback. Pull requests are also welcome.
 
 # To be implemented
-* Reduce post padding for mobile
+* ~~Reduce post padding for mobile~~
+* Normalize font size for H1, H2, H3 sizes in posts
 * Tagging and category system
 * Comments
+
