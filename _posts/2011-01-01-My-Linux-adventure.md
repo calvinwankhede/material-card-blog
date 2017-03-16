@@ -5,8 +5,6 @@ textcolor: white
 author: Calliope
 ---
 
-# My Linux adventure, 2008 - *
-
 ## The first act - A bumbling newbie
 I first stumbled upon Linux some 8 years ago, when a technology magazine my dad had a subscription for included a live CD for Ubuntu. I was quite unaware that anything other than Windows existed at the time and even when I did realise that Linux was an alternative, I just couldn't see its utility after installing it. It felt clunky, inelegant and mostly just lacked the ease of installing programs as compared to Windows. Not to mention that even with the graphical interface, it took me a few hours and an accidentally deleted partition before it was finally installed. Installing programs meant I sometimes had to use `dpkg` in the command line. I understood none of that at the time. To me, it became increasingly clear that Linux was not designed for a 10 year old and I quickly ~~backed out~~ gave up.
 
