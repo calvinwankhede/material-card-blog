@@ -2,7 +2,7 @@
 layout: post
 color: "#BAD123"
 textcolor: white
-author: Zog
+author: Calliope
 ---
 
 # My Linux adventure, 2008 - *
