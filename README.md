@@ -4,9 +4,7 @@ Built with Jekyll, this blog theme uses Google's [Material Design Lite](https://
 
 ![Screenshot](/screenshot.png)
 
-A live demo is available [here](https://zogthealien.tk/material-card-blog/).
-
-This theme is a stripped down fork of my personal blog, available [here](https://zogthealien.tk/blog/).
+A live demo is available [here](https://calvinwankhede.github.io/material-card-blog/).
 
 # Features
 * Easy to set up
